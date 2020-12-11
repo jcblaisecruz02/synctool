@@ -19,6 +19,8 @@ def main():
 			print("Folder contents have changed!")
 			print("Added: " + str(set(ncontents) - set(contents)))
 			contents = ncontents
+			time.sleep(args.sleep)
+			print("Command executing...")
 			os.system(args.command)
 			print("Command executed. Resume watching.")
 			
